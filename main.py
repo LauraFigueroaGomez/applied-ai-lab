@@ -20,7 +20,15 @@ def echo(message: Message):
     return {"received": message.text}
 
 class GenerateRequest(BaseModel):
-    prompt: str = Field(min_length=1, max_length=500)
+    prompt: str = Field(
+        min_length=10, 
+        max_length=500
+    )
+    max_tokens: int = Field(
+        default=1,
+        ge=1,
+        le=500
+    )
 
 @app.post("/generate")
 def generate(request: GenerateRequest):
