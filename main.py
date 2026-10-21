@@ -31,7 +31,7 @@ class GenerateRequest(BaseModel):
     )
 
 class StudyNotesRequest(BaseModel):
-    notes: str = Field(min_length=10, max_length=5000)
+    notes: str = Field(min_length=20, max_length=3000)
 
 
 class StudyNotesResult(BaseModel):
