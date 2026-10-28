@@ -19,11 +19,11 @@ def test_fast_api_case_sensitive():
 
 def test_empty_str():
     res = retrieve_document("", documents)
-    assert res == None
+    assert res is None
 
 def test_str_not_found():
     res = retrieve_document("API", documents)
-    assert res == None
+    assert res is None
 
 
 

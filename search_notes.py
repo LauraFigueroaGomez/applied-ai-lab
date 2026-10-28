@@ -12,7 +12,7 @@ def retrieve_document(query: str, documents: dict[str, str]) -> str | None:
 
     # 2. Loop through documents.items()
     for title, text in documents.items():
-        # 3. Check for a case-sensitive match
+        # 3. Check for a case-insensitive match
         if title.lower() == q:
             # 4. Return the matching text
             return text
