@@ -29,3 +29,7 @@ def test_related_words_redis():
     res = retrieve_document("What stores data in memory?", documents)
     assert res == "Redis is an in-memory data store used for caching."
 
+
+def test_unrelated_words():
+    res = retrieve_document("Tell me about cooking", documents)
+    assert res is None
